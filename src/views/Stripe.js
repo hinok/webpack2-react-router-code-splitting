@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import importScripts, { amdify } from './../lib/importScripts';
+import importScripts from './../lib/importScripts';
 
-importScripts('https://js.stripe.com/v2/')
+importScripts('https://js.stripe.com/v2/', 'Stripe')
     .then(Stripe => {
         console.log('Stripe loaded');
         console.log('Stripe', Stripe);

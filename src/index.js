@@ -4,11 +4,8 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
-import { amdify } from './lib/importScripts';
 import Core from './Core';
 import routes from './routes';
-
-amdify();
 
 const App = () => (
     <Router>
