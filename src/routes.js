@@ -19,7 +19,7 @@ const asyncComponent = loadComponent => (
                     this.setState({ Component });
                 })
                 .catch((err) => {
-                    console.error(`Cannot load AsyncComponent: ${filePath}`);
+                    console.error(`Cannot load component in <AsyncComponent />`);
                     console.error(err);
                 });
         }
@@ -46,7 +46,20 @@ const ROUTES = [
     {
         name: 'About',
         path: '/about',
+        exact: true,
         component: asyncComponent(() => import('./views/About')),
+    },
+    {
+        name: 'Stripe',
+        path: '/stripe',
+        exact: true,
+        component: asyncComponent(() => import('./views/Stripe')),
+    },
+    {
+        name: 'StripeBlocking',
+        path: '/stripe-blocking',
+        exact: true,
+        component: asyncComponent(() => import('./views/StripeBlocking')),
     },
 ];
 

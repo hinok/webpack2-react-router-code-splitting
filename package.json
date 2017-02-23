@@ -14,6 +14,7 @@
   "author": "Dawid Karabin <mail@hinok.net>",
   "license": "ISC",
   "dependencies": {
+    "loadjs": "^3.3.1",
     "moment": "^2.17.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",

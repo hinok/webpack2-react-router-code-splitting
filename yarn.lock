@@ -2791,6 +2791,10 @@ loader-utils@^1.0.1:
     emojis-list "^2.0.0"
     json5 "^0.5.0"
 
+loadjs@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/loadjs/-/loadjs-3.3.1.tgz#bc64af4fc0a882cdff93f6783a0a0d9ff90c408d"
+
 lodash.assign@^4.0.3, lodash.assign@^4.0.6, lodash.assign@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/lodash.assign/-/lodash.assign-4.2.0.tgz#0d99f3ccd7a6d261d19bdaeb9245005d285808e7"
