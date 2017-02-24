@@ -51,7 +51,6 @@ class LazilyLoad extends Component {
   }
 
   render() {
-    console.log('render');
     if (!this.state.isLoaded) return null;
     return React.Children.only(this.props.children(this.state.modules));
   }

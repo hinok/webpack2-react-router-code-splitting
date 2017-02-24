@@ -16,12 +16,11 @@ const config = {
       {
         test: /\.(js|jsx)$/,
         use: 'babel-loader',
-        exclude: [
-          path.resolve(__dirname, 'node_modules')
-        ],
+        exclude: /node_modules/,
       },
       {
         test: /\.scss$/,
+        exclude: /node_modules/,
         loader: ExtractTextPlugin.extract({
             loader: 'css-loader?sourceMap!sass-loader?sourceMap',
         }),

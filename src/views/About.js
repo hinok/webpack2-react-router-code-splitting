@@ -1,13 +1,13 @@
 import React from 'react';
 import moment from 'moment';
 
-const Home = () => {
+const About = () => {
     return (
         <div>
-            About view<br />
-            {moment().format('MMMM Do YYYY, h:mm:ss a')}
+            <h1>About view</h1>
+            <p>{moment().format('MMMM Do YYYY, h:mm:ss a')}</p>
         </div>
     );
 };
 
-export default Home;
+export default About;

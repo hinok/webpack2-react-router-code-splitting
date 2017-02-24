@@ -30,8 +30,7 @@ const asyncComponent = loadComponent => (
 
         render() {
             const { Component } = this.state;
-            const { load, ...rest } = this.props;
-            return (Component) ? <Component {...rest} /> : null;
+            return (Component) ? <Component {...this.props} /> : null;
         }
     }
 );
@@ -56,10 +55,10 @@ const ROUTES = [
         component: asyncComponent(() => import('./views/Stripe')),
     },
     {
-        name: 'StripeBlocking',
-        path: '/stripe-blocking',
+        name: 'StripeLazily',
+        path: '/stripe-lazily',
         exact: true,
-        component: asyncComponent(() => import('./views/StripeBlocking')),
+        component: asyncComponent(() => import('./views/StripeLazily')),
     },
 ];
 

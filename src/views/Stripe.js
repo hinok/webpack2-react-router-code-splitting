@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import importScripts from './../lib/importScripts';
+import importScript from './../lib/importScript';
 
-importScripts('https://js.stripe.com/v2/', 'Stripe')
+importScript('https://js.stripe.com/v2/', 'Stripe')
     .then(Stripe => {
         console.log('Stripe loaded');
         console.log('Stripe', Stripe);
@@ -16,7 +16,8 @@ class Stripe extends Component {
     render() {
         return (
             <div>
-                Stripe view
+                <h1>Stripe</h1>
+                <p>This view is rendered even if Stripe <strong>is NOT downloaded.</strong></p>
             </div>
         );
     }

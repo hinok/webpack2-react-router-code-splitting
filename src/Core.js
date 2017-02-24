@@ -9,7 +9,7 @@ const Core = ({ children }) => {
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/stripe">Stripe</Link></li>
-                <li><Link to="/stripe-blocking">Stripe (block view)</Link></li>
+                <li><Link to="/stripe-lazily">Stripe (lazily)</Link></li>
             </ul>
             <div>{children}</div>
         </div>

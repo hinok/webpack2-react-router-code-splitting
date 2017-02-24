@@ -1,13 +1,17 @@
 import loadjs from 'loadjs';
 
-function importScripts(scripts, globalName) {
+/**
+ * @see https://github.com/webpack/webpack/issues/150
+ * @see https://github.com/webpack/webpack/issues/462
+ */
+function importScript(script, globalName) {
     return new Promise((resolve, reject) => {
         if (loadjs.isDefined(globalName)) {
             resolve(window[globalName]);
             return;
         }
 
-        loadjs(scripts, globalName, {
+        loadjs(script, globalName, {
             success: () => {
                 resolve(window[globalName]);
             },
@@ -16,4 +20,4 @@ function importScripts(scripts, globalName) {
     });
 }
 
-export default importScripts;
+export default importScript;
