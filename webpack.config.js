@@ -27,6 +27,8 @@ const config = {
       },
     ],
   },
+  devtool: 'eval-source-map', // works correctly
+  // devtool: 'cheap-module-eval-source-map', // doesn't work correctly
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
     compress: true,

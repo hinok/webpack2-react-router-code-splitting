@@ -20,7 +20,7 @@ const asyncComponent = loadComponent => (
                 })
                 .catch((err) => {
                     console.error(`Cannot load component in <AsyncComponent />`);
-                    console.error(err);
+                    throw err;
                 });
         }
 
@@ -37,28 +37,29 @@ const asyncComponent = loadComponent => (
 
 const ROUTES = [
     {
-        name: 'Home',
         path: '/',
         exact: true,
         component: asyncComponent(() => import('./views/Home')),
     },
     {
-        name: 'About',
         path: '/about',
         exact: true,
         component: asyncComponent(() => import('./views/About')),
     },
     {
-        name: 'Stripe',
         path: '/stripe',
         exact: true,
         component: asyncComponent(() => import('./views/Stripe')),
     },
     {
-        name: 'StripeLazily',
         path: '/stripe-lazily',
         exact: true,
         component: asyncComponent(() => import('./views/StripeLazily')),
+    },
+    {
+        path: '/sourcemaps-dont-work',
+        exact: true,
+        component: asyncComponent(() => import('./views/SourceMapsDontWork')),
     },
 ];
 

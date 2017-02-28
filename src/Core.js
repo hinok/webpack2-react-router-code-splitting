@@ -10,6 +10,7 @@ const Core = ({ children }) => {
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/stripe">Stripe</Link></li>
                 <li><Link to="/stripe-lazily">Stripe (lazily)</Link></li>
+                <li><Link to="/sourcemaps-dont-work">SourceMaps don't work</Link></li>
             </ul>
             <div>{children}</div>
         </div>
